@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+  font-family: "Abhaya Libre", serif;
+}
+
+body {
+  background: #fff;
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  color: #fff;
+}
