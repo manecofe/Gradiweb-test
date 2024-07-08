@@ -20,12 +20,23 @@ module.exports = (env, { mode }) => {
     module: {
       rules: [
         {
-          test: /\.jsx?$/,
-          loader: "babel-loader",
-        },
-        {
           test: /\.css$/,
           use: ["style-loader", "css-loader"],
+        },
+        {
+          test: /\.scss$/i,
+          use: ["style-loader", "css-loader", "sass-loader"],
+        },
+        {
+          test: /\.(png|jpg|jpeg|gif|svg)$/i,
+          use: [
+            {
+              loader: "file-loader",
+              options: {
+                name: "[path][name].[ext]",
+              },
+            },
+          ],
         },
       ],
     },
